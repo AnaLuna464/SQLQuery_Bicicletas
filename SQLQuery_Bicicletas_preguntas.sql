@@ -18,7 +18,7 @@ JOIN SalesLT.SalesOrderDetail OD ON OD.SalesOrderID=OH.SalesOrderID
 Group by AD.CountryRegion
 Order by ventas_totales DESC;
 
--- 4. Producto que mas se vende por región? ** Se puede hacer un JOIN mas?
+-- 4. Producto que mas se vende por región? ** Poner un Join mas para la región!
 SELECT PC.Name, P.ListPrice, SUM(OD.OrderQty) AS ventas_totales
 FROM SalesLT.Product P
 JOIN SalesLT.ProductCategory PC ON PC.ProductCategoryID = P.ProductCategoryID
